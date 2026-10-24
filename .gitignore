@@ -3,3 +3,15 @@ __pycache__/
 .pytest_cache/
 *.egg-info/
 reports/
+
+# Frontend generated files
+node_modules/
+.next/
+dist/
+build/
+
+# Local files and secrets
+.DS_Store
+.env
+.env.*
+!.env.example
