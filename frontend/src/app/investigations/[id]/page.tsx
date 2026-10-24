@@ -18,21 +18,28 @@ interface PageProps {
   params: Promise<{ id: string }>;
 }
 
-export default async function InvestigationDetailPage({ params }: PageProps) {
+async function InvestigationWorkspaceContent({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const { id } = await params;
+  return <InvestigationWorkspace id={id} />;
+}
 
+export default function InvestigationDetailPage({ params }: PageProps) {
   return (
     <Suspense
       fallback={
         <AppShell>
           <div className="py-24 text-center space-y-3 font-mono">
-            <Loader2 className="w-8 h-8 animate-spin text-cyan-400 mx-auto" />
-            <p className="text-sm text-slate-400">Loading diagnostic workspace...</p>
+            <Loader2 className="w-8 h-8 animate-spin text-[#A8AAA5] mx-auto" />
+            <p className="text-sm text-[#777A76]">Loading diagnostic workspace...</p>
           </div>
         </AppShell>
       }
     >
-      <InvestigationWorkspace id={id} />
+      <InvestigationWorkspaceContent params={params} />
     </Suspense>
   );
 }

@@ -61,13 +61,13 @@ export function NavigationRail({ className }: NavigationRailProps) {
       <div className="mb-2 flex flex-col items-center">
         <Link
           href="/dashboard"
-          className="w-7 h-7 rounded-lg bg-[#222424] border border-[rgba(226,226,218,0.18)] flex items-center justify-center overflow-hidden hover:border-[rgba(235,235,228,0.3)] transition-all cursor-pointer"
+          className="w-7 h-7 rounded-lg bg-[#222424] border border-[rgba(226,226,218,0.18)] flex items-center justify-center p-0.5 hover:border-[rgba(235,235,228,0.3)] transition-all cursor-pointer"
           title="WOBBLE Home"
         >
           <img
-            src="/logo.svg"
+            src="/logo-mark.svg"
             alt="WOBBLE"
-            className="w-14 h-7 max-w-none object-cover object-left"
+            className="w-5 h-5 object-contain"
           />
         </Link>
       </div>

@@ -29,6 +29,9 @@ export const metadata: Metadata = {
     "automated reproduction",
     "delta debugging",
   ],
+  icons: {
+    icon: "/logo.svg",
+  },
 };
 
 export default function RootLayout({
